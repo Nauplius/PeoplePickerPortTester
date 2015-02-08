@@ -14,17 +14,19 @@
                     <Run Text="This program is licensed under the General Public License v2."/>
                 </Paragraph>
                 <Paragraph>
-                    <Run Text="For more information, directions, and help, visit the CodePlex project site at "/>
-                    <Hyperlink NavigateUri="http://peoplepicker.codeplex.com/" RequestNavigate="Hyperlink_OnRequestNavigate">
+                    <Run Text="For more information, directions, and help, visit the GitHub project site at "/>
+                    <Run Text=" "/>
+                    <Hyperlink NavigateUri="https://github.com/Nauplius/PeoplePickerPortTester/">
                         <Run Text="PeoplePicker Port Tester"/>
                     </Hyperlink>
+                    <Run Text=" "/>
                     <Run Text="."/>
                 </Paragraph>
                 <Paragraph>
                     <Run Text="Author: Trevor Seward, Nauplius Applications"/>
                 </Paragraph>
                 <Paragraph>
-                    <Hyperlink NavigateUri="http://thesharepointfarm.com/" RequestNavigate="Hyperlink_OnRequestNavigate">
+                    <Hyperlink NavigateUri="http://thesharepointfarm.com/">
                         <Run Text="The SharePoint Farm"/>
                     </Hyperlink>
                 </Paragraph>
