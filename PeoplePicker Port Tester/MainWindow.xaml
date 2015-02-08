@@ -1,0 +1,45 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="PeoplePicker_Port_Tester.MainWindow"
+        Title="PeoplePicker Port Tester" Height="780" Width="730" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" 
+        SizeToContent="Width" ResizeMode="NoResize" >
+    <Grid Name="ParentGrid" Background="White" HorizontalAlignment="Left" Width="719">
+        <Canvas x:Name="sViewer" Margin="10,257.96,10.001,0" ScrollViewer.CanContentScroll="True"  ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <Grid x:Name="Grid" Height="483.02" >
+                <Label Content="DNS Resolution" FontWeight="Bold" MinHeight="15" HorizontalAlignment="Left" Width="140" Margin="10,10,0,443.97" d:IsLocked="True"/>
+                <TextBox x:Name="tbDns" Width="680" HorizontalAlignment="Left" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Margin="10,44.05,0,345.24" d:IsLocked="True" />
+
+                <Label Content="Ports" FontWeight="Bold" Margin="10,142.8,0,313.915" HorizontalAlignment="Left" Width="140"/>
+                <TextBox x:Name="tbPorts" Width="680" HorizontalAlignment="Left" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Margin="10,174.085,0,181.08" TextWrapping="Wrap"/>
+
+                <Label Content="LDAP Query" FontWeight="Bold" Margin="10,306.94,560,144.08" d:IsLocked="True"/>
+                <TextBox x:Name="tbLdap" Width="680" HorizontalAlignment="Left" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Margin="10,344,0,10" d:IsLocked="True"/>
+            </Grid>
+        </Canvas>
+        <Label Content="LDAP Path" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="23" Width="67.993" />
+        <Label Content="Dom\User" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Height="23"/>
+        <Label Content="LDAP Filter" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Height="23" Width="67.993"/>
+        <TextBox x:Name="txtLDAPPath" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="23" Margin="96,33,0,0" TextWrapping="Wrap" Text="LDAP://CN=Users,DC=contoso,DC=com" VerticalAlignment="Top" Width="405" MaxLines="1" TabIndex="0" GotFocus="OnClick" />
+        <TextBox x:Name="txtLDAPFilter" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="23" Margin="96,61,0,0" TextWrapping="Wrap" Text="(sAMAccountName=*)" VerticalAlignment="Top" Width="405" MaxLines="1" TabIndex="1" />
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="23" Margin="96,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="405" MaxLines="1" TabIndex="6"/>
+        <RadioButton x:Name="rbtnFindOne" Content="Find One" VerticalContentAlignment="Center" VerticalAlignment="Top" Margin="96,89,0,0" Height="27" TabIndex="2" Background="White" HorizontalAlignment="Left" Width="75"/>
+        <RadioButton x:Name="rbtnFindAll" Content="Find All" VerticalContentAlignment="Center" Margin="176,89,0,0" VerticalAlignment="Top" Height="27" TabIndex="3" HorizontalAlignment="Left" Width="75"/>
+        <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Margin="96,233,0,0" VerticalAlignment="Top" Width="75" Click="Connect" TabIndex="8"/>
+        <Label Content="Password" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="10.113,205,0,0" VerticalAlignment="Top" Width="64" Height="23"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="96,205,0,0" VerticalAlignment="Top" Width="405" TabIndex="7"/>
+        <Label Content="LDAP Port" Margin="10,121,0,0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="67.993" Height="23" VerticalAlignment="Top" />
+        <Label Content="LDAPS Port" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="10.113,149,0,0" Width="72" Height="23" VerticalAlignment="Top" RenderTransformOrigin="0.471,1.884"/>
+        <TextBox x:Name="txtLDAPSPort" HorizontalAlignment="Left" Height="23" Margin="96,149,0,0" TextWrapping="Wrap" Text="636" VerticalContentAlignment="Center" Width="120" MaxLength="5" MaxLines="1" TabIndex="5" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLDAPPort" HorizontalAlignment="Left" Height="23" Margin="96,121,0,0" TextWrapping="Wrap" Text="389" VerticalContentAlignment="Center" Width="120" MaxLength="5" MaxLines="1" TabIndex="4" VerticalAlignment="Top"/>
+        <Menu IsMainMenu="True" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=ParentGrid}">
+            <MenuItem Header="_File" >
+                <MenuItem Header="_Save Output" Click="SaveOutputClick" />
+                <MenuItem Header="_Exit" Click="ExitClick"/>
+            </MenuItem>
+            <MenuItem Header="_Help" >
+                <MenuItem Header="_About" Click="AboutClick"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
