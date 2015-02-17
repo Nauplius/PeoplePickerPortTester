@@ -76,9 +76,9 @@ namespace PeoplePicker_Port_Tester
                 foreach (IPAddress ip in IPs)
                 {
                     IPAddress ip1 = ip;
+                    var hostName = Dns.GetHostEntry(ip1); //Must be outside of the dispatcher
                     Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(() =>
                     {
-                        var hostName = Dns.GetHostEntry(ip1);
                         tbDns.Text = tbDns.Text + string.Format("{0} [{1}] \r\n", ip1, hostName.HostName);// + ip1 + "\r\n";
                         }));
                 }
