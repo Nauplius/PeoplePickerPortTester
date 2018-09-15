@@ -1,7 +1,7 @@
 # People Picker Port Tester
 
-The People Picker Port Tester provides a SharePoint Administrator with a tool to test network connectivity problems between a SharePoint Server and Active Directory. This tool can help the Administrator diagnose and resolve network issues, which contributes to users being able to pick individuals from the People Picker on SharePoint websites.
+This tool has been replaced by a PowerShell script which can be found on the [PowerShell Gallery](https://www.powershellgallery.com/packages/PeoplePickerPortProber/). You may also use the below PowerShell command to install the module.
 
-Please review the [Wiki](../../wiki) for further information on this project.
-
-Releases are available on the [Releases](../../releases) page.
+```powershell
+Install-Module PeoplePickerPortProber
+```
